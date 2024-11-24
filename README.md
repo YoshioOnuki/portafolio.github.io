@@ -16,7 +16,7 @@ Bienvenido a mi portafolio. Soy un **Desarrollador Web** apasionado por crear ap
 Puedes contactarme para proyectos o consultas:
 
 - **Correo electrónico**: [onukinavas@gmail.com](mailto:onukinavas@gmail.com)
-- **GitHub**: [TuPerfilGitHub]([https://github.com/tu-perfil](https://github.com/YoshioOnuki))
-- **LinkedIn**: [TuPerfilLinkedIn]([https://linkedin.com/in/tu-perfil](https://www.linkedin.com/in/yoshio-onuki-480b70283/))
+- **GitHub**: [YoshioOnuki]([https://github.com/tu-perfil](https://github.com/YoshioOnuki))
+- **LinkedIn**: [YoshioOnuki]([https://linkedin.com/in/tu-perfil](https://www.linkedin.com/in/yoshio-onuki-480b70283/))
 
 Gracias por visitar mi portafolio. ¡Estoy emocionado de colaborar en nuevos proyectos!
