@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,96 +11,253 @@
     body {
       scroll-behavior: smooth;
     }
+
     .fade-in {
       animation: fade-in 1.5s ease-in-out forwards;
       opacity: 0;
     }
+
     @keyframes fade-in {
       0% {
         opacity: 0;
         transform: translateY(20px);
       }
+
       100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     .floating {
       animation: floating 3s ease-in-out infinite;
     }
+
     @keyframes floating {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-10px);
       }
     }
   </style>
 </head>
-<body class="bg-neutral-900 text-white font-sans leading-relaxed">
+<!-- <body class="bg-neutral-900 text-white font-sans leading-relaxed"> -->
+
+<body class="bg-cover bg-center bg-no-repeat text-white font-sans" style="background-image: url('assets/media/home-background.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;">
+
   <!-- Header -->
   <header class="fixed top-0 w-full z-50 bg-neutral-900 bg-opacity-90 backdrop-blur-lg">
     <div class="container mx-auto flex justify-between items-center py-4 px-8">
-      <h1 class="text-2xl font-semibold text-white">Yoshio Onuki</h1>
+      <a href="/">
+        <h1 class="text-2xl font-semibold text-white">Yoshio Onuki</h1>
+      </a>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#home" class="text-gray-400 hover:text-white transition">Inicio</a></li>
-          <li><a href="#projects" class="text-gray-400 hover:text-white transition">Proyectos</a></li>
-          <li><a href="#about" class="text-gray-400 hover:text-white transition">Sobre mí</a></li>
-          <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+          <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
+          <li><a href="#experience" class="text-gray-400 hover:text-white transition duration-300">Experiencia</a></li>
+          <li><a href="#projects" class="text-gray-400 hover:text-white transition duration-300">Proyectos</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="h-screen flex flex-col justify-center items-center text-center">
-    <h2 class="text-6xl font-bold mb-4 fade-in">Hola, soy Yoshio Onuki</h2>
-    <p class="text-lg text-gray-400 mb-8 fade-in">Transformando ideas en soluciones, una línea de código a la vez.</p>
-    <a href="#projects" class="px-6 py-3 bg-emerald-500 text-gray-900 font-semibold rounded-lg hover:bg-emerald-400 fade-in">
-      Descubre mis proyectos
-    </a>
-  </section>
+  <!-- Main Content -->
+  <section id="inicio" class="h-screen py-20 bg-neutral-900 bg-opacity-70 backdrop-blur-sm flex items-center justify-center">
+    <div class="container mx-auto px-8 flex items-center justify-between py-20 md:py-32">
+      <!-- Text Section -->
+      <div class="w-full md:w-1/2 space-y-6 fade-in">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-100">
+          Hola, soy Yoshio Onuki
+        </h1>
+        <h2 class="text-2xl md:text-4xl font-semibold text-gray-300">
+          Desarrollador de 
+          <span class="text-blue-500 floating">
+            software
+          </span>
+        </h2>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed py-4">
+          Profesional en 
+          <span class="text-blue-500">Ingeniería de Sistemas</span>, 
+          con 2 años experiencia en desarrollo web utilizando 
+          <span class="text-blue-500">Laravel y Livewire</span>.
+          He trabajado en la Escuela de Posgrado de la Universidad Nacional de Ucayali desarrollando el sistema de inscripciones y evaluaciones, donde adquirí
+          sólidos conocimientos en Livewire y Laravel. Posteriormente, brindé soporte a un sistema de gestión académica
+          en la UNIA,
+          y actualmente utilizo Laravel 11 y Livewire 3, optimizando el rendimiento de las aplicaciones para asegurar
+          una
+          experiencia de usuario fluida y eficiente.
+        </p>
+        <!-- Social Links -->
+        <div class="flex space-x-4">
+          <a 
+            href="https://www.linkedin.com/in/yoshio-onuki-480b70283/" 
+            class="px-4 py-2 text-white rounded font-medium transition flex items-center group relative"
+            style="background-color: #0077B5;"
+            target="_blank"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin me-2">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M8 11v5" />
+              <path d="M8 8v.01" />
+              <path d="M12 16v-5" />
+              <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+              <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+            </svg>
+            LinkedIn
+            <span class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-gray-300 text-md rounded-lg py-2 px-4 z-10">
+              Perfil de LinkedIn
+            </span>
+          </a>
+          <a 
+            href="https://github.com/YoshioOnuki" 
+            class="px-4 py-2 text-white rounded font-medium transition flex items-center group relative"
+            style="background-color: #333333;"
+            target="_blank"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+            </svg>
+            GitHub
+            <span class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-gray-300 text-md rounded-lg py-2 px-4 z-10">
+              Perfil de GitHub
+            </span>
+          </a>
+          <a 
+            href="mailto:onukinavas@gmail.com"
+            class="px-4 py-2 text-white rounded font-medium transition flex items-center group relative"
+            style="background-color: #D93025;"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+              <path d="M3 7l9 6l9 -6" />
+            </svg>
+            Correo
+            <span class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-800 text-gray-300 text-md rounded-lg py-2 px-4 z-10">
+              Enviar correo
+            </span>
+          </a>
+        </div>
+      </div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-neutral-800">
-    <div class="container mx-auto px-8">
-      <h3 class="text-4xl font-bold text-center mb-12 fade-in">Proyectos destacados</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-        <!-- Proyecto 1 -->
-        <a class="bg-neutral-700 p-6 rounded-lg shadow-lg fade-in" href="http://posgrado.unu.edu.pe/login" target="_blank">
-          <img src="assets/media/posgrado.png" alt="Proyecto 1" class="rounded-md mb-4">
-          <h4 class="text-xl font-semibold text-white mb-2">Sistema de Inscripciones</h4>
-          <p class="text-gray-400">Plataforma para gestionar inscripciones y evaluaciones, desarrollada con Laravel 10 y Livewire 2.</p>
-        </a>
-        <!-- Proyecto 2 -->
-        <a class="bg-neutral-700 p-6 rounded-lg shadow-lg fade-in" href="https://pafqoja.nyc.dom.my.id/login" target="_blank">
-          <img src="assets/media/aula-virtual.png" alt="Proyecto 2" class="rounded-md mb-4">
-          <h4 class="text-xl font-semibold text-white mb-2">Aula Virtual</h4>
-          <p class="text-gray-400">Plataforma para la interacción entre docentes y alumnos, usando Laravel 11, Livewire 3 y Alpine.js.</p>
-        </a>
-        <!-- Proyecto 3 -->
-        <!-- <div class="bg-neutral-700 p-6 rounded-lg shadow-lg fade-in">
-          <img src="https://via.placeholder.com/400" alt="Proyecto 3" class="rounded-md mb-4">
-          <h4 class="text-xl font-semibold text-white mb-2">Gestión de Inventarios</h4>
-          <p class="text-gray-400">Software para control de equipos y asignaciones, desarrollado para la SUNARP.</p>
-        </div> -->
+      <!-- Profile Picture -->
+      <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0 fade-in">
+        <img src="assets/media/Foto_perfil.jpeg" alt="Foto de perfil de Yoshio Onuki Navas"
+          class="w-64 h-64 rounded-full border-4 border-blue-500">
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-neutral-900">
+
+<!-- Experience Section -->
+<section id="experience" class="py-20 bg-neutral-800">
+  <div class="container mx-auto px-8">
+    <h3 class="text-4xl font-bold text-center mb-12 fade-in">Experiencia laboral</h3>
+    <div class="space-y-8 fade-in">
+      <!-- Experiencia 1 -->
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-2">Desarrollador Web - Universidad Nacional de Ucayali</h4>
+        <p class="text-gray-400">Mayo 2024 - Actualidad (7 meses)</p>
+        <p class="text-gray-400">
+          Desarrollé un sistema de Aula Virtual para la Escuela de Posgrado utilizando Laravel, Livewire, Bootstrap,
+          HTML, CSS, PHP y MySQL. Colaboré con diversas áreas para garantizar que las necesidades académicas y
+          administrativas fueran cubiertas, implementando mejoras continuas para ofrecer una experiencia de usuario
+          óptima.
+        </p>
+      </div>
+      <!-- Experiencia 2 -->
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-2">Soporte Técnico - JN Ingeniería S.C.R.L.</h4>
+        <p class="text-gray-400">Enero 2021 - Septiembre 2024 (3 años 9 meses)</p>
+        <p class="text-gray-400">
+          Brindé soporte técnico y mantenimiento de sistemas, desarrollando y actualizando la página web de la empresa
+          utilizando Laravel y MySQL. También proporcioné soporte interno, resolviendo incidencias relacionadas con
+          hardware y software.
+        </p>
+      </div>
+      <!-- Experiencia 3 -->
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-2">Administrador de Sistemas - Universidad Nacional Intercultural de la Amazonía</h4>
+        <p class="text-gray-400">Noviembre 2023 - Marzo 2024 (5 meses)</p>
+        <p class="text-gray-400">
+          Administré y di soporte a un sistema de gestión académica, desarrollando y optimizando funcionalidades en
+          Laravel. Aseguré la seguridad, eficiencia y usabilidad del sistema, proporcioné soporte técnico y documenté los
+          procesos.
+        </p>
+      </div>
+      <!-- Experiencia 4 -->
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-2">Desarrollador Web - Universidad Nacional de Ucayali</h4>
+        <p class="text-gray-400">Febrero 2023 - Agosto 2023 (7 meses)</p>
+        <p class="text-gray-400">
+          Diseñé y desarrollé aplicaciones web con Laravel y Livewire, implementando funcionalidades clave para la
+          gestión de inscripciones, evaluaciones y matrículas. Trabajé con el equipo para resolver problemas técnicos y
+          mejorar el rendimiento del sistema.
+        </p>
+      </div>
+      <!-- Experiencia 5 -->
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-2">Practicante en Apoyo Informático - Universidad Nacional de Ucayali</h4>
+        <p class="text-gray-400">Mayo 2022 - Enero 2023 (9 meses)</p>
+        <p class="text-gray-400">
+          Administré el portal web de la universidad utilizando Joomla, gestioné el aula virtual de posgrado y creé
+          manuales de usuario. También realicé la digitalización de datos para actualizar la base de datos estudiantil.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-neutral-900">
     <div class="container mx-auto px-8">
-      <h3 class="text-4xl font-bold text-center mb-12 fade-in">Sobre mí</h3>
-      <p class="text-lg text-gray-400 text-center leading-relaxed fade-in px-8 mx-auto">
-        Bachiller en Ingeniería de Sistemas, con experiencia en desarrollo web utilizando Laravel y Livewire. 
-        He trabajado en la Escuela de Posgrado desarrollando el sistema de inscripciones y evaluaciones, 
-        donde adquirí sólidos conocimientos en Livewire y Laravel. Posteriormente, brindé soporte a un sistema de gestión académica 
-        en la UNIA, y actualmente utilizo Laravel 11 y Livewire 3, optimizando el rendimiento de las aplicaciones para asegurar una 
-        experiencia de usuario fluida y eficiente.
-      </p>
+      <h3 class="text-4xl font-bold text-center mb-12 fade-in">Proyectos destacados</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Proyecto 1 -->
+        <a class="bg-neutral-700 p-6 rounded-lg shadow-lg fade-in" href="http://posgrado.unu.edu.pe/login"
+          target="_blank">
+          <img src="assets/media/posgrado.png" alt="Proyecto 1" class="rounded-md mb-4">
+          <h4 class="text-xl font-semibold text-white mb-2">Sistema de Inscripciones</h4>
+          <p class="text-gray-400">Plataforma para gestionar inscripciones y evaluaciones para la Escuela de Posgrado de la Universidad Nacional de Ucayali, desarrollada con Laravel 10 y
+            Livewire 2.</p>
+        </a>
+        <!-- Proyecto 2 -->
+        <a class="bg-neutral-700 p-6 rounded-lg shadow-lg fade-in" href="https://github.com/jeanbruce26/investi_derecho"
+          target="_blank">
+          <img src="assets/media/derecho.png" alt="Proyecto 1" class="rounded-md mb-4">
+          <h4 class="text-xl font-semibold text-white mb-2">Termómetro del Investigador</h4>
+          <p class="text-gray-400">
+            Aplicación web para medir el impacto de la producción científica de los docentes de la Universidad Nacional de Ucayali, utilizando Laravel 9.
+          </p>
+        </a>
+        <!-- Proyecto 3 -->
+        <a class="bg-neutral-700 p-6 rounded-lg shadow-lg fade-in" href="https://pafqoja.nyc.dom.my.id/login"
+          target="_blank">
+          <img src="assets/media/aula-virtual.png" alt="Proyecto 2" class="rounded-md mb-4">
+          <h4 class="text-xl font-semibold text-white mb-2">Aula Virtual</h4>
+          <p class="text-gray-400">Plataforma para la interacción entre docentes y alumnos para la Escuela de Posgrado de la Universidad Nacional de Ucayali,
+            usando Laravel 11, Livewire
+            3 y Alpine.js.</p>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -108,10 +266,14 @@
     <div class="container mx-auto px-8">
       <h3 class="text-4xl font-bold text-center mb-12 fade-in">Contacto</h3>
       <form class="max-w-md mx-auto space-y-6 fade-in">
-        <input type="text" placeholder="Tu nombre" class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-        <input type="email" placeholder="Tu correo" class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-        <textarea placeholder="Tu mensaje" rows="5" class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
-        <button type="submit" class="w-full px-6 py-3 bg-emerald-500 text-gray-900 font-semibold rounded-lg hover:bg-emerald-400">
+        <input type="text" placeholder="Tu nombre"
+          class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        <input type="email" placeholder="Tu correo"
+          class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        <textarea placeholder="Tu mensaje" rows="5"
+          class="w-full px-4 py-3 bg-neutral-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+        <button type="submit"
+          class="w-full px-6 py-3 bg-emerald-500 text-gray-900 font-semibold rounded-lg hover:bg-emerald-400">
           Enviar mensaje
         </button>
       </form>
@@ -123,4 +285,5 @@
     <p>&copy; 2024 Yoshio Onuki. Todos los derechos reservados.</p>
   </footer>
 </body>
+
 </html>
