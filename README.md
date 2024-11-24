@@ -1,4 +1,4 @@
-# Portafolio de [Tu Nombre]
+# Portafolio de Yoshio Onuki
 
 Bienvenido a mi portafolio. Soy un **Desarrollador Web** apasionado por crear aplicaciones web interactivas y optimizadas. A lo largo de mi carrera he trabajado con diversas tecnologías y he contribuido en múltiples proyectos, siempre buscando mejorar la experiencia de usuario y la eficiencia en el desarrollo.
 
